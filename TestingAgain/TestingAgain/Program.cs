@@ -1,18 +1,28 @@
-﻿
-
-using TestingAgain;
+﻿using TestingAgain;
 
 Console.WriteLine("Hello, World!");
 Console.WriteLine("=================");
 
-
-try
+Employee employee1 = new SalaryEmployee() 
 {
-    Console.WriteLine(new Date(2024, 2, 29));
-    Console.WriteLine(new Date(2022, 11, 11));
-    Console.WriteLine(new Date(2022, 2, 456));
-}
-catch (Exception error)
+    Id = 1010,
+    FirstName = "Sandra",
+    LastName = "Morales",
+    BirthDate = new Date(1990, 5, 23),
+    HiringDate = new Date(2022, 1, 15),
+    IsActive = true,
+    Salary = 1815453.45M
+    };
+Employee employee2 = new CommissionEmployee()
 {
-    Console.WriteLine(error.Message);
-}
+    Id = 10,
+    FirstName = "Sandra2",
+    LastName = "Morales2",
+    BirthDate = new Date(1990, 5, 23),
+    HiringDate = new Date(2022, 1, 15),
+    IsActive = true,
+    Sales = 2000M,
+    CommissionPercentaje = 0.03F
+};
+Console.WriteLine(employee1);
+Console.WriteLine(employee2);
