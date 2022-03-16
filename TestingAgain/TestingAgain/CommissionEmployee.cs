@@ -18,7 +18,7 @@ namespace TestingAgain
 
         public override string ToString()
         {
-            return $"{base.ToString()}, \n\t Commission percentaje: {CommissionPercentaje:P2}, \n\t Sales: {Sales}, \n\t Value To Pay: {$"{GetValueToPay:C2}",15}  ";
+            return $"{base.ToString()}, \n\t Commission percentaje: {CommissionPercentaje:P2}, \n\t Sales: {Sales}, \n\t Value To Pay: {$"{GetValueToPay():C2}",15}  ";
         }
     }
 }

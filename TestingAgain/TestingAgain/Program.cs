@@ -62,7 +62,22 @@ foreach (Employee employee in employees)
 }
 Console.WriteLine($"=================== \n {payroll:C2}");
 
-
+Invoice invoice = new Invoice()
+{
+    Id = 10,
+    Description = "Carrito",
+    Price = 202020M,
+    Quantity = 6
+};
+Invoice invoice2 = new Invoice()
+{
+    Id = 20,
+    Description = "gas",
+    Price = 55555M,
+    Quantity = 4
+};
+Console.WriteLine(invoice);
+Console.WriteLine(invoice2);
 /*
 ICollection<Employee> employees = new List<Employee>();
 employees.Add(employee4);

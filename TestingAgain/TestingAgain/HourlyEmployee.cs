@@ -12,7 +12,7 @@
         }
         public override string ToString()
         {
-            return $"{base.ToString()}, \n\t Hours: {Hours:N2}, \n\t Hour Value: {HourValue}, \n\t Value To Pay: {$"{GetValueToPay:C2}",15}  ";
+            return $"{base.ToString()}, \n\t Hours: {Hours:N2}, \n\t Hour Value: {HourValue}, \n\t Value To Pay: {$"{GetValueToPay():C2}",15}  ";
         }
     }
 }
