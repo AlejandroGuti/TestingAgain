@@ -35,6 +35,44 @@ Employee employee3 = new HourlyEmployee()
     Hours = 48,
     HourValue = 20000M
 };
+Employee employee4 = new BasecommissionEmployee()
+{
+    Id = 10,
+    FirstName = "Sandra4",
+    LastName = "Morales4",
+    BirthDate = new Date(1990, 5, 23),
+    HiringDate = new Date(2022, 1, 15),
+    IsActive = true,
+    Base = 20000M,
+    Sales = 20000M,
+    CommissionPercentaje= 0.04F
+    
+};
+
+ICollection<Employee> employees = new List<Employee>()
+{
+    employee1, employee2, employee3, employee4
+};
+
+decimal payroll = 0;
+foreach (Employee employee in employees)
+{
+    Console.WriteLine(employee);
+    payroll += employee.GetValueToPay();
+}
+Console.WriteLine($"=================== \n {payroll:C2}");
+
+
+/*
+ICollection<Employee> employees = new List<Employee>();
+employees.Add(employee4);
+employees.Add(employee3);
+employees.Add(employee2);
+employees.Add(employee1);*/
+
+
+/*
+Console.WriteLine(employee4);
 Console.WriteLine(employee1);
 Console.WriteLine(employee2);
-Console.WriteLine(employee3);
+Console.WriteLine(employee3);*/
